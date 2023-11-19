@@ -13,8 +13,6 @@ return {
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
-
-    -- see below for full list of optional dependencies 👇
   },
   opts = {
     workspaces = {
@@ -23,8 +21,14 @@ return {
         path = "~/second_brain",
       },
     },
-
-    -- see below for full list of options 👇
-    lazy = false,
+    notes_subdir = "pages",
+    daily_notes = {
+      folder = "journals",
+      date_format = "%Y_%m_%d",
+    },
+    -- Optional, customize how names/IDs for new notes are created.
+    note_id_func = function(title)
+      return title
+    end,
   },
 }
