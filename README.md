@@ -12,6 +12,15 @@ Link to the documentation: [documentation](https://lazyvim.github.io/installatio
 #Config tutorial
 For me it configuring default Lazyvim config wasn't trivial, so here I will put how to do things that I found hard:
 
+## setup python environment
+out of the box Lazyvim extras python works pretty well, but there are few manuals steps to do
+create venv
+`python -m venv .venv`
+`source .venv/bin/activate`
+`pip install neovim`
+optional for django autocompletion
+`pip install django-stubs`
+
 ## configure ruff autoformatter
 create `.ruff.toml` in the base directory of a project and put config in there, for example
 ```
