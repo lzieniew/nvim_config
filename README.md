@@ -1,4 +1,4 @@
-# 💤 LazyVim
+# 💤 My LazyVim based nvim config 
 
 My personalized configuration of LazyVim
 
@@ -7,10 +7,8 @@ It supports python LSP, it doesn't have test running inside nvim, but instead a 
 To install first backup your nvim config and run: 
 `git clone git@github.com:lzieniew/nvim_config.git ~/.config/nvim`
 
-Link to the documentation: [documentation](https://lazyvim.github.io/installation)
-
 #Config tutorial
-For me it configuring default Lazyvim config wasn't trivial, so here I will put how to do things that I found hard:
+For me configuring default Lazyvim config wasn't trivial, so here I will put how to do things that I found hard:
 
 ## setup python environment
 out of the box Lazyvim extras python works pretty well, but there are few manuals steps to do
