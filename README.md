@@ -32,3 +32,14 @@ quote-style = "single"
 
 ## disable autoformatting
 put `vim.g.autoformat = true` in `lua/config/options.lua`
+
+## disable type checks in pyright
+in codebases without extensive type specifying pyright gives a lot of type errors, which are distracting
+They can be disabled by changing diagnostic rules checking mode to off
+Create a file .pyrightconfig.json in repository root and add 
+```
+{
+  "typeCheckingMode": "off"
+}
+```
+WARNING! - it doesn't work for me - to investigate
