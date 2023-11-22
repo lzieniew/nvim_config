@@ -22,7 +22,7 @@ optional for django autocompletion
 ## ignore files from venv
 In order to ignore files from venv in neotree plugin, it's enought to add 'venv/' to '.ignore' file at the root of current project
 Other option is to create venv with name starting with `.`, for example .venv
-Ignoring venv directory while grepping throught all files (with telescope I think) is more problematic
+Ignoring venv directory while grepping throught all files (with Telescope plugin) is more problematic
 In theory the .ignore file should be enough, but it doesn't work for me
 
 ## configure ruff autoformatter
