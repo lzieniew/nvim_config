@@ -36,10 +36,59 @@ put `vim.g.autoformat = true` in `lua/config/options.lua`
 ## disable type checks in pyright
 in codebases without extensive type specifying pyright gives a lot of type errors, which are distracting
 They can be disabled by changing diagnostic rules checking mode to off
-Create a file .pyrightconfig.json in repository root and add 
+I've checked multiple methods for this and only this config in `lua/plugins/lua.lsp` worked:
 ```
-{
-  "typeCheckingMode": "off"
+return {
+  "neovim/nvim-lspconfig",
+  opts = {
+    servers = {
+      pyright = {
+        capabilities = (function()
+          local capabilities = vim.lsp.protocol.make_client_capabilities()
+          capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
+          return capabilities
+        end)(),
+        settings = {
+          python = {
+            analysis = {
+              useLibraryCodeForTypes = true,
+              diagnosticSeverityOverrides = {
+                reportUnusedVariable = "warning", -- or anything
+              },
+              typeCheckingMode = "off",
+            },
+          },
+        },
+      },
+      ruff_lsp = {
+        keys = {
+          {
+            "<leader>co",
+            function()
+              vim.lsp.buf.code_action({
+                apply = true,
+                context = {
+                  only = { "source.organizeImports" },
+                  diagnostics = {},
+                },
+              })
+            end,
+            desc = "Organize Imports",
+          },
+        },
+      },
+    },
+    setup = {
+      ruff_lsp = function()
+        require("lazyvim.util").lsp.on_attach(function(client, _)
+          if client.name == "ruff_lsp" then
+            -- Disable hover in favor of Pyright
+            client.server_capabilities.hoverProvider = false
+          end
+        end)
+      end,
+    },
+  },
 }
 ```
-WARNING! - it doesn't work for me - to investigate
+Also, note for future self: Pyright requires restart of neovim to recognize config change
