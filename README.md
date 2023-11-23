@@ -20,10 +20,10 @@ optional for django autocompletion
 `pip install django-stubs`
 
 ## ignore files from venv
-In order to ignore files from venv in neotree plugin, it's enought to add 'venv/' to '.ignore' file at the root of current project
+In order to ignore files from venv in neotree plugin, it's enought to add 'venv/' to '.ignore' file at the root of current project.
 Other option is to create venv with name starting with `.`, for example .venv
 Ignoring venv directory while grepping throught all files (with Telescope plugin) is more problematic
-In theory the .ignore file should be enough, but it doesn't work for me
+In theory the .ignore file should be enough, but for me it only works with venv, not .venv
 
 ## configure ruff autoformatter
 create `.ruff.toml` in the base directory of a project and put config in there, for example
