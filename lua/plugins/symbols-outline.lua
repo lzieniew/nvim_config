@@ -31,7 +31,7 @@ return {
       fold_reset = "R",
     },
     lsp_blacklist = {},
-    symbol_blacklist = {},
+    symbol_blacklist = { "Field", "Property", "Variable", "Enum", "Constant" },
     symbols = {
       File = { icon = "", hl = "@text.uri" },
       Module = { icon = "", hl = "@namespace" },
