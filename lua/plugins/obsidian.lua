@@ -30,5 +30,8 @@ return {
     note_id_func = function(title)
       return title
     end,
+    templates = {
+      subdir = "templates",
+    },
   },
 }
