@@ -7,4 +7,16 @@ vim.api.nvim_set_keymap("n", "<Leader>rd", ":PythonCopyReferenceDotted<CR>", { n
 vim.api.nvim_set_keymap("n", "<Leader>rp", ":PythonCopyReferencePytest<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>ri", ":PythonCopyReferenceImport<CR>", { noremap = true, silent = true })
 
+-- Symbols outline
 vim.api.nvim_set_keymap("n", "<Leader>h", ":SymbolsOutline<CR>", { noremap = true, silent = true })
+
+-- Obsidian.nvim
+vim.api.nvim_set_keymap("n", "<Leader>ob", ":ObsidianBacklinks<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>of", ":ObsidianFollowLink<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>ot", ":ObsidianToday<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>oT", ":ObsidianTemplate<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>os", ":ObsidianSearch<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>oo", ":ObsidianOpen<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>oq", ":ObsidianQuickSwitch<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>ol", ":ObsidianLink<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>oL", ":ObsidianLinkNewO<CR>", { noremap = true, silent = true })
