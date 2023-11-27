@@ -13,17 +13,17 @@ For me configuring default Lazyvim config wasn't trivial, so here I will put how
 ## setup python environment
 out of the box Lazyvim extras python works pretty well, but there are few manuals steps to do
 create venv
-`python -m venv .venv`
-`source .venv/bin/activate`
+`python -m venv venv`
+`source venv/bin/activate`
 `pip install neovim`
 optional for django autocompletion
 `pip install django-stubs`
 
 ## ignore files from venv
 In order to ignore files from venv in neotree plugin, it's enought to add 'venv/' to '.ignore' file at the root of current project.
-Other option is to create venv with name starting with `.`, for example .venv
-Ignoring venv directory while grepping throught all files (with Telescope plugin) is more problematic
-In theory the .ignore file should be enough, but for me it only works with venv, not .venv
+Other option is to create venv with name starting with `.`, for example .venv.
+Ignoring venv directory while grepping throught all files (with Telescope plugin) is more problematic.
+In theory the .ignore file should be enough, but for me it only works with venv, not .venv.
 
 ## configure ruff autoformatter
 create `.ruff.toml` in the base directory of a project and put config in there, for example
