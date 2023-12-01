@@ -35,7 +35,7 @@ quote-style = "single"
 ```
 
 ## disable autoformatting
-put `vim.g.autoformat = true` in `lua/config/options.lua`
+put `vim.g.autoformat = false` in `lua/config/options.lua`
 
 ## disable type checks in pyright
 in codebases without extensive type specifying pyright gives a lot of type errors, which are distracting.
