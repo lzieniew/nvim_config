@@ -20,3 +20,6 @@ vim.api.nvim_set_keymap("n", "<Leader>oo", ":ObsidianOpen<CR>", { noremap = true
 vim.api.nvim_set_keymap("n", "<Leader>oq", ":ObsidianQuickSwitch<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>ol", ":ObsidianLink<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>oL", ":ObsidianLinkNewO<CR>", { noremap = true, silent = true })
+
+-- blame.nvim
+vim.api.nvim_set_keymap("n", "<Leader>gb", ":ToggleBlame<CR>", { noremap = true, silent = true })
