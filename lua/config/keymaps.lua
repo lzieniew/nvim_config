@@ -24,7 +24,7 @@ vim.api.nvim_set_keymap("n", "<Leader>oL", ":ObsidianLinkNewO<CR>", { noremap = 
 -- blame.nvim
 vim.api.nvim_set_keymap("n", "<Leader>gb", ":ToggleBlame<CR>", { noremap = true, silent = true })
 
--- parrot.nvim 
+-- parrot.nvim
 vim.api.nvim_set_keymap("n", "<Leader>pr", ":PrtChatRespond<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>pn", ":PrtChatNew<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>pt", ":PrtChatToggle<CR>", { noremap = true, silent = true })
@@ -32,8 +32,25 @@ vim.api.nvim_set_keymap("n", "<Leader>pa", ":PrtAsk<CR>", { noremap = true, sile
 vim.api.nvim_set_keymap("n", "<Leader>ps", ":PrtStop<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>pf", ":PrtChatFinder<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>pc", ":PrtContext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>pp", ":PrtAppend<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<Leader>pr", ":PrtRewrite<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<Leader>pi", ":PrtImplement<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("x", "<Leader>pp", ":PrtAppend<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("x", "<Leader>ca", ":PrtTabnew<CR>", { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap("x", "<Leader>pca", ":PrtTabnew<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>pPc",
+  "<Cmd>PrtProvider anthropic<CR>|<Cmd>PrtAgent Claude-3-Opus<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>pPo",
+  "<Cmd>PrtProvider ollama<CR>|<Cmd>PrtAgent dolphin-mixtral<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>pPg",
+  "<Cmd>PrtProvider openai<CR>|<Cmd>PrtAgent CodeGPT4<CR>",
+  { noremap = true, silent = true }
+)
