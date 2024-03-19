@@ -35,3 +35,5 @@ vim.api.nvim_set_keymap("n", "<Leader>pc", ":PrtContext<CR>", { noremap = true, 
 vim.api.nvim_set_keymap("x", "<Leader>pr", ":PrtRewrite<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<Leader>pi", ":PrtImplement<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<Leader>pp", ":PrtAppend<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<Leader>ca", ":PrtTabnew<CR>", { noremap = true, silent = true })
+
