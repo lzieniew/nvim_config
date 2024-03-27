@@ -37,6 +37,7 @@ vim.api.nvim_set_keymap("x", "<Leader>pr", ":PrtRewrite<CR>", { noremap = true, 
 vim.api.nvim_set_keymap("x", "<Leader>pi", ":PrtImplement<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<Leader>pca", ":PrtTabnew<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>pPp", "<Cmd>PrtProvider<CR>", { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>pPc",
@@ -52,6 +53,25 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>pPg",
-  "<Cmd>PrtProvider openai<CR>|<Cmd>PrtAgent CodeGPT4<CR>",
+  "<Cmd>PrtProvider openai<CR>|<Cmd>PrtAgent ChatGPT4<CR>",
+  { noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>pRc",
+  "<Cmd>PrtProvider anthropic<CR>|<Cmd>PrtAgent Claude-3-Opus-Chat<CR>|<Cmd>PrtChatRespond<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>pRo",
+  "<Cmd>PrtProvider ollama<CR>|<Cmd>PrtAgent dolphin-mixtral<CR>|<Cmd>PrtChatRespond<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>pRg",
+  "<Cmd>PrtProvider openai<CR>|<Cmd>PrtAgent ChatGPT4-Chat<CR>|<Cmd>PrtChatRespond<CR>",
   { noremap = true, silent = true }
 )
