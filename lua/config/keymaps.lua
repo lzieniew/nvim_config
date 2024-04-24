@@ -22,7 +22,7 @@ vim.api.nvim_set_keymap("n", "<Leader>ol", ":ObsidianLink<CR>", { noremap = true
 vim.api.nvim_set_keymap("n", "<Leader>oL", ":ObsidianLinkNewO<CR>", { noremap = true, silent = true })
 
 -- blame.nvim
-vim.api.nvim_set_keymap("n", "<Leader>gb", ":ToggleBlame<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>gb", ":BlameToggle<CR>", { noremap = true, silent = true })
 
 -- parrot.nvim
 vim.api.nvim_set_keymap("n", "<Leader>pr", ":PrtChatRespond<CR>", { noremap = true, silent = true })
